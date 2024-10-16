@@ -10,25 +10,159 @@
 
   header {
     font-family: verdana;
+    display: flex;
+    flex-direction: row;
+
   }
 
   body {
-    background-color: lightgrey;
+    background-color: white;
     padding: 0;
     margin: 0;
     font-family: verdana;
     font-size:16px;
     font-weight: 100;
     color: black;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    margin: 15px;
   }
   
   h1 {
-    padding: 0;
-    margin: 0;
+    font-size: 25px;
   }
+
   
   p {
     padding: 0;
     margin: 0;
   }
 
+
+  div {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row
+
+  }
+  
+article {
+  display: flex;
+  flex-direction: column; 
+  margin: 15px;
+  border: solid 2px;
+  width: 100%;
+
+}
+
+.article-section {
+  display: flex;
+  flex-direction: row;
+}
+
+
+footer {
+  background: lightgray;
+  color: black;
+  margin-top: 15px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid black ;
+}
+
+
+.nav-link {
+  margin: 15px;
+  align-self: end;
+  
+}
+
+nav {
+  flex-grow: 2;
+  display: flex;
+  justify-content: end;
+  
+}
+
+.logo {
+  flex-grow: 0;
+}
+
+
+.article-heading {
+  height: 50px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  border-left: black 2px solid;
+  border-bottom: black 2px solid;
+  align-self: end;
+}
+
+hr {
+  margin: 2.8em auto;
+  height: 2px;
+  max-width: 180px;
+  background: #0b9d3b;
+  border: 2px;
+}
+
+
+
+.article-text {
+    padding: 15px;
+    text-align: justify;
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: 100;
+  }
+  
+.introduction-section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+  height: 32px;
+  width: 32px;
+  margin: 15px;
+
+}
+
+
+@media all and (max-width: 900px) {
+  main {
+      flex-wrap: wrap;
+       }
+  .article-section {
+    flex-wrap: wrap;
+  }
+  header {
+    justify-content: space-between;
+  }
+  nav {
+    display: none;
+  }
+  .logo-text {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+    justify-content: end;
+    align-self: center;
+  }
+  }
